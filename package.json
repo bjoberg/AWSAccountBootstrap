@@ -2,12 +2,12 @@
   "name": "aws_account_bootstrap",
   "version": "1.0.0",
   "bin": {
-    "aws_account_bootstrap": "bin/index.js"
+    "aws_account_bootstrap": "dist/bin/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc",
     "watch": "tsc -w",
-    "test": "echo OK",
     "cdk": "cdk"
   },
   "devDependencies": {
