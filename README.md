@@ -19,6 +19,9 @@ aws configure sso # Use management account for the session name
 # Option 2: Existing profile
 aws sso login --profile [[your-sso-profile]]
 
+# One-time per account/region: provision the CDK toolkit
+cdk bootstrap --profile [[your-sso-profile]]
+
 # Deploy the application
 cdk deploy --profile [[your-sso-profile]]
 ```
